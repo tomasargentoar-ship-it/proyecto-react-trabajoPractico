@@ -9,14 +9,15 @@ import Cuadros from './componentes/Cuadros.jsx'
 import Porcentaje from './componentes/Porcentaje.jsx'
 
 function App() {
+  const [text, setText] = useState("");
   return(
     <>
     <Header />
     <Titulo />
     <Boton />
-    <Textarea />
+    <Textarea text={text} setText={setText}/>
     <Checkbox />
-    <Cuadros />
+    <Cuadros text={text}/>
     <Porcentaje />
     </>
   )

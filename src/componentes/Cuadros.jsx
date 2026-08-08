@@ -5,11 +5,11 @@ import naranjacorrecto from '../assets/naranjacorrecto.jpg'
 import rogiso from '../assets/rogiso.jpg'
 
 
-function Cuadros(){
+function Cuadros({text}){
  return(
 <section className='sectionCuadros'>
 <div className='Cuadro1'>
-<h1 className='numero'>278</h1>
+<h1 className='numero'>{text.length}</h1>
 <h2 className='texto'>Total Characters</h2>    
 </div>
 <div className='Cuadro2'>
