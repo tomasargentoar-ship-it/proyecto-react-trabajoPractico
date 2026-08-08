@@ -1,0 +1,18 @@
+.boton{
+width:35px;
+height:35px;
+border:none;
+cursor:pointer;
+background-color:#1d1c1d;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:5px;
+}
+
+.contenedorBoton{
+display:flex;
+justify-content:right;
+padding:0px 25px 0px 0px;
+margin-top:-265px;
+}

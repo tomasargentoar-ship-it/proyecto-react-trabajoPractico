@@ -1,0 +1,12 @@
+.sectionCheckbox{
+display:flex;
+justify-content: center;
+gap:50px;
+margin-top:20px;
+}
+.checkbox{
+cursor:pointer;
+}
+.tiempo{
+margin-left: 230px;
+}

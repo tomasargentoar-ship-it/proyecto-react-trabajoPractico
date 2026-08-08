@@ -1,0 +1,6 @@
+.titulo{
+display: flex;
+justify-content: center;
+padding: 30px 675px 0px 0px;
+font-size: 25px;
+}

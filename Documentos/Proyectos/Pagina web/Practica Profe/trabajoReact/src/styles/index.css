@@ -1,0 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+*{
+color:aliceblue;
+margin:0px;
+padding:0px;
+font-family:'Google Sans Flex', sans-serif
+}
+
+body{
+background-color: #0d0b11;
+}
