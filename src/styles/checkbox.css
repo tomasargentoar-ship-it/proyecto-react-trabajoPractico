@@ -1,8 +1,9 @@
 .sectionCheckbox{
 display:flex;
-justify-content: center;
-gap:50px;
+justify-content: space-between;
+margin:0px auto;
 margin-top:20px;
+width: 45%;
 }
 .checkbox{
 cursor:pointer;
@@ -17,3 +18,11 @@ height: 10px;
 color:black;
 padding:5px;
 }
+
+@media (max-width:1000px){
+.sectionCheckbox{
+display: flex;
+justify-content: space-between;
+white-space:nowrap;
+width: 93%;
+}}
