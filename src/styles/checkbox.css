@@ -8,5 +8,12 @@ margin-top:20px;
 cursor:pointer;
 }
 .tiempo{
-margin-left: 230px;
+margin-left: 80px;
+}
+.inputNumber{
+border-radius: 10px;
+width:100px;
+height: 10px;
+color:black;
+padding:5px;
 }
