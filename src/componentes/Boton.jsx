@@ -16,6 +16,7 @@ document.body.style.backgroundColor = '#ffffff';
 document.body.style.color = '#000000';
 logo.src = logoClaro
 textarea.style.backgroundColor = '#ffffff'
+textarea.style.color = '#000000'
 textarea.style.border='solid #bebcbc'
 botones.forEach((boton) =>{
 boton.style.backgroundColor = '#ffffff'
