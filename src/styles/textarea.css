@@ -5,9 +5,9 @@ justify-content:center;
 align-items:center;
 }
 .textarea{
+background-color:#181818;
 width:850px;
 height:250px;
-background-color:#181818;
 margin-top:250px;
 border-radius:5px;
 margin-top:240px;

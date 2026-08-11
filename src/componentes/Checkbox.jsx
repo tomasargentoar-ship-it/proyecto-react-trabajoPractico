@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '../styles/checkbox.css'
-function Checkbox({excludeSpaces,setExcludeSpaces,limitCharacter,setlimitCharacter,limitNumber,setlimitNumber}){
+function Checkbox({excludeSpaces,setExcludeSpaces,limitCharacter,setlimitCharacter,limitNumber,setlimitNumber,readingTime}){
     return(
     <div className='sectionCheckbox'>
      <label>
@@ -13,7 +13,7 @@ function Checkbox({excludeSpaces,setExcludeSpaces,limitCharacter,setlimitCharact
      </label>{
     limitCharacter && <input type='number' className='inputNumber' value={limitNumber} onChange={(e)=> setlimitNumber(e.target.value)}/>
      }
-     <h4 className='tiempo'>Approx.reading time: 1minute</h4>
+     <h4 className='tiempo'>Approx.reading time: {readingTime} minute</h4>
      </div>
     )
 }
