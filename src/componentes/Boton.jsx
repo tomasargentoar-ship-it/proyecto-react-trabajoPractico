@@ -14,26 +14,25 @@ setFlashLight(!flashLight)
 if(!flashLight){
 document.body.style.backgroundColor = '#ffffff';
 document.body.style.color = '#000000';
-logo.src = logoClaro
-textarea.style.backgroundColor = '#ffffff'
-textarea.style.color = '#000000'
-textarea.style.border='5px solid #000000'
+logo.src = logoClaro;
+textarea.style.backgroundColor = '#cfcfcf';
+textarea.style.color = '#000000';
+textarea.style.border='solid #ebeaea';
 botones.forEach((boton) =>{
-boton.style.backgroundColor = '#ffffff'
-boton.style.color = '#000000'
-
+boton.style.backgroundColor = '#ffffff';
+boton.style.color = '#000000';
 })
 }
 else{
 document.body.style.backgroundColor = '#0d0b11';
-document.body.style.color ='aliceblue'
-logo.src = logoOscuro
-textarea.style.backgroundColor='#181818'
-textarea.style.color='#ffffff'
-textarea.style.border='1px solid #8d8c8c'
+document.body.style.color ='aliceblue';
+logo.src = logoOscuro;
+textarea.style.backgroundColor='#181818';
+textarea.style.color='#ffffff';
+textarea.style.border='1px solid #8d8c8c';
 botones.forEach((boton)=>{
-boton.style.backgroundColor = '#0d0b11'
-boton.style.color = '#ffffff'
+boton.style.backgroundColor = '#0d0b11';
+boton.style.color = '#ffffff';
 })
 }}
 

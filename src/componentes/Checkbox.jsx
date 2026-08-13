@@ -13,7 +13,7 @@ function Checkbox({excludeSpaces,setExcludeSpaces,limitCharacter,setlimitCharact
      </label>{
     limitCharacter && <input type='number' className='inputNumber' value={limitNumber} onChange={(e)=> setlimitNumber(e.target.value)}/>
      }
-     <h4 className='tiempo'>Approx.reading time: {readingTime} minute</h4>
+     <h4 className='tiempo' value={readingTime}>Approx.reading time: {readingTime} minute</h4>
      </div>
     )
 }

@@ -13,7 +13,7 @@ function Cuadros({text,characters,word,oraciones}){
 <h2 className='texto'>Total Characters</h2>    
 </div>
 <div className='Cuadro2'>
-<h1 className='numero'>{word}</h1>
+<h1 className='numero' value={word}>{word}</h1>
 <h2 className='texto'>Word Count</h2>
 </div>
 <div className='Cuadro3'>
