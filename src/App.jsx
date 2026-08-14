@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import './styles/App.css'
 import Header from './componentes/Header.jsx'
 import Titulo from './componentes/Titulo.jsx'
@@ -7,6 +8,10 @@ import Textarea from './componentes/Textarea.jsx'
 import Checkbox from './componentes/Checkbox.jsx'
 import Cuadros from './componentes/Cuadros.jsx'
 import Porcentaje from './componentes/Porcentaje.jsx'
+import { Customslink } from './componentes/Customslink.jsx'
+import { Soporte } from './router-componentes/Soporte.jsx'
+import { Normas } from './router-componentes/Normas.jsx'
+
 
 function App() {
   const [text, setText] = useState("");
@@ -67,6 +72,14 @@ function App() {
   const color = flashLight ? '#ffffff' : '#0d0b11'
 
   return(
+    
+    <BrowserRouter>
+
+    <Routes>
+
+    <Route path='/normas' element={<Normas/>}/> 
+    <Route path='/soporte' element={<Soporte/>}/>
+    <Route path='/' element={
     <>
     <Header />
     <Titulo />
@@ -75,7 +88,15 @@ function App() {
     <Checkbox  excludeSpaces={excludeSpaces} setExcludeSpaces={setExcludeSpaces} limitCharacter={limitCharacter} setlimitCharacter={setlimitCharacter} limitNumber={limitNumber} setlimitNumber={setlimitNumber} readingTime={readingTime} />
     <Cuadros text={text} characters={characters} word={word} oraciones={oraciones}/>
     <Porcentaje letters={letters} sortLetters={sortLetters} showAll={showAll} setShowAll={setShowAll} visibleLetters={visibleLetters}/>
+    <Customslink/>
     </>
+  }/>
+    <Route path='/'/>
+
+    </Routes>
+
+    </BrowserRouter>
+    
   )
 }
 

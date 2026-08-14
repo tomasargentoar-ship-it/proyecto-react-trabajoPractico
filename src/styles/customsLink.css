@@ -1,0 +1,13 @@
+.navLink{
+display: flex;
+text-align: center;
+flex-direction: column;
+gap: 5px;
+margin-top: 10px;
+}
+.normas{
+color: aliceblue;
+}
+.soporte{
+color: aliceblue;
+}

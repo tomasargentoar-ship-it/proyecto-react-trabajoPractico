@@ -1,0 +1,17 @@
+.sectionNormas{
+display: flex;
+flex-direction: column;
+text-align: center;
+align-items: center;
+margin-top: 300px;
+}
+
+.normativas{
+margin-top:50px;
+margin-bottom: 50px;
+}
+
+.lista{
+margin-top:50px;
+
+}

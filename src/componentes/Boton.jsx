@@ -2,6 +2,7 @@ import { useState } from 'react'
 import '../styles/boton.css'
 import logoClaro from '../assets/logoClaro.jpg'
 import logoOscuro from '../assets/Logo.png'
+import { Links } from 'react-router-dom'
 
 function Boton({flashLight,setFlashLight,color}){
 
@@ -9,6 +10,7 @@ const tocarClick = () => {
 const textarea = document.querySelector('textarea')
 const botones = document.querySelectorAll('button')
 const logo = document.querySelector('img')
+const links = document.querySelectorAll('a')
 
 setFlashLight(!flashLight)
 if(!flashLight){
@@ -22,6 +24,9 @@ botones.forEach((boton) =>{
 boton.style.backgroundColor = '#ffffff';
 boton.style.color = '#000000';
 })
+links.forEach((Link)=>{
+Link.style.color = '#000000'
+})
 }
 else{
 document.body.style.backgroundColor = '#0d0b11';
@@ -33,6 +38,9 @@ textarea.style.border='1px solid #8d8c8c';
 botones.forEach((boton)=>{
 boton.style.backgroundColor = '#0d0b11';
 boton.style.color = '#ffffff';
+})
+links.forEach((Link)=>{
+Link.style.color = '#ffffff'
 })
 }}
 
