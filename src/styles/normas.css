@@ -1,17 +1,58 @@
-.sectionNormas{
+.sectionTodo{
 display: flex;
 flex-direction: column;
 text-align: center;
+margin-top: 150px;
+}
+
+.sectionLogo{
+display: flex;
+flex-direction: row;
+margin: 10px;
+width: 50%;
+}
+
+.sectionBoton{
+display: flex;
+justify-content: right;
+text-align: center;
 align-items: center;
-margin-top: 300px;
+margin-top: -45px;
+margin-right:20px;
+}
+
+.sectionBoton button{
+color:aliceblue;
+background-color:#0d0b11;
+border: none;
+width:35px;
+height:35px;
 }
 
 .normativas{
-margin-top:50px;
+margin-top: 50px;
 margin-bottom: 50px;
 }
 
-.lista{
-margin-top:50px;
-
+.listaNormas li{
+margin-bottom:10px;
 }
+
+.preguntasFrecuentes{
+margin-top: 40px;
+margin-bottom: 50px;
+}
+
+.listaPreguntas li{
+margin-bottom: 10px;
+}
+
+.link{
+color: aliceblue;
+font-size: 25px;
+}
+
+.navInicio{
+margin-top: 10px;
+}
+

@@ -3,8 +3,11 @@ import '../styles/boton.css'
 import logoClaro from '../assets/logoClaro.jpg'
 import logoOscuro from '../assets/Logo.png'
 import { Links } from 'react-router-dom'
+import { useEffect } from 'react'
 
 function Boton({flashLight,setFlashLight,color}){
+
+    
 
 const tocarClick = () => {
 const textarea = document.querySelector('textarea')
@@ -17,17 +20,16 @@ if(!flashLight){
 document.body.style.backgroundColor = '#ffffff';
 document.body.style.color = '#000000';
 logo.src = logoClaro;
-textarea.style.backgroundColor = '#cfcfcf';
+textarea.style.backgroundColor = '#e9e7e7';
 textarea.style.color = '#000000';
-textarea.style.border='solid #ebeaea';
+textarea.style.border=' 1px solid #aaaaaa';
 botones.forEach((boton) =>{
 boton.style.backgroundColor = '#ffffff';
 boton.style.color = '#000000';
 })
 links.forEach((Link)=>{
 Link.style.color = '#000000'
-})
-}
+})}
 else{
 document.body.style.backgroundColor = '#0d0b11';
 document.body.style.color ='aliceblue';

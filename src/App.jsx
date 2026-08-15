@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import './styles/App.css'
+import './styles/index.css'
 import Header from './componentes/Header.jsx'
 import Titulo from './componentes/Titulo.jsx'
 import Boton from './componentes/Boton.jsx'
