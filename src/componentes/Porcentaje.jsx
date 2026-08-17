@@ -10,7 +10,8 @@ function Porcentaje({letters,sortLetters,showAll, setShowAll,visibleLetters}){
     </div>
     
     <article>
-    {visibleLetters.map(letter => (
+
+  {visibleLetters.map(letter => (
    <div key={letter.letterName} className='porcentaje'>
     <span>{letter.letterName.toUpperCase()}</span>
     <div className="linea">
@@ -19,7 +20,9 @@ function Porcentaje({letters,sortLetters,showAll, setShowAll,visibleLetters}){
     <span>{letter.amount} ({letter.porcentaje.toFixed(2)}%)</span>
     </div>
     ))}
+
     </article>
+
    </section>
    )
 }

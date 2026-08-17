@@ -25,7 +25,9 @@ function App() {
 
   const [showAll, setShowAll] = useState(false)
 
-  const [flashLight,setFlashLight]= useState(false)
+  const [flashLight,setFlashLight]= useState(true)
+
+  const [nombreArchivo,setNombreArchivo] = useState('seleccione un archivo');
 
   const handleChangeTextarea=(e)=>{
   if(limitCharacter){
@@ -70,7 +72,7 @@ function App() {
 
   const visibleLetters = showAll ? sortLetters : sortLetters.slice(0, 4)
 
-  const color = flashLight ? '#ffffff' : '#0d0b11'
+  
 
   return(
     
@@ -78,8 +80,8 @@ function App() {
 
     <Routes>
 
-    <Route path='/normas' element={<Normas/>}/> 
-    <Route path='/soporte' element={<Soporte/>}/>
+    <Route path='/normas' element={<Normas flashLight={flashLight} setFlashLight={setFlashLight}/>}/> 
+    <Route path='/soporte' element={<Soporte flashLight={flashLight} setFlashLight={setFlashLight}nombreArchivo={nombreArchivo} setNombreArchivo={setNombreArchivo}/>}/>
     <Route path='/' element={
     <>
     <Header />
@@ -92,7 +94,6 @@ function App() {
     <Customslink/>
     </>
   }/>
-    <Route path='/'/>
 
     </Routes>
 

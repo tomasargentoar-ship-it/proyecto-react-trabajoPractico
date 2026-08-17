@@ -1,32 +1,149 @@
 import React from "react";
+import { useEffect } from "react";
 import '../styles/soporte.css'
 import Boton from "../componentes/Boton";
 import { Link } from "react-router-dom";
-export function Soporte({flashLight,setFlashLight}){
+import logoNegro from '../assets/Logo.png'
+import logoBlanco from '../assets/logoClaro.jpg'
+
+export function Soporte({flashLight,setFlashLight,nombreArchivo,setNombreArchivo}){
+    
+   const cambio = ()=>{
+   setFlashLight(!flashLight)
+   }
+   
+
+   useEffect(()=>{
+
+   const imagen = document.querySelector('img')
+
+   const boton = document.querySelector('button')
+
+   const link = document.querySelector('a')
+
+   const text = document.querySelector('textarea')
+
+   const inputs = document.querySelectorAll('input')
+
+   if(!flashLight){
+   document.body.style.backgroundColor = '#ffffff'
+   
+   document.body.style.color = '#000000'
+   
+   imagen.src = logoBlanco;
+   
+   boton.style.color = '#000000'
+   
+   boton.style.backgroundColor ='#ffffff'
+   
+   link.style.color = '#000000'
+
+   text.style.backgroundColor = '#e9e7e7'
+
+   text.style.color = '#000000'
+
+   text.style.border = '1px solid #aaaaaa'
+
+   inputs.forEach((input)=>{
+   input.style.backgroundColor = '#e9e7e7'
+   input.style.color = '#000000'
+   input.style.border = '1px solid #aaaaaa'
+   })
+
+   } 
+   else{
+   document.body.style.backgroundColor = '#0d0b11'
+   
+   document.body.style.color = '#ffffff'
+   
+   imagen.src = logoNegro;
+   
+   boton.style.backgroundColor = '#0d0b11'
+   
+   boton.style.color = '#ffffff'
+   
+   link.style.color = '#ffffff'
+
+   text.style.backgroundColor = '#181818'
+
+   text.style.color = '#ffffff'
+
+   text.style.border = '1px solid #8d8c8c'
+
+   inputs.forEach((input)=>{
+   input.style.backgroundColor = '#181818'
+   input.style.color = '#ffffff'
+   input.style.border = '1px solid #8d8c8c'
+   })
+
+   }
+},[flashLight])
+   
+   const cambiarArchivo = (e)=> {
+    if(e.target.files.length > 0){
+    setNombreArchivo(e.target.files[0].name)
+    }
+   }
+
     return(
     <main>
+    
+    <section className="sectionImg">
+    <img src={logoNegro} alt="Logo" className="soporteLogo"/>
+    <h3 className="suporTitulo">Character Counter</h3>
+    </section>
+   
+
+    <section className="sectionBotom">
+    <button className="botonSoporte" onClick={cambio}>☼</button>
+    </section>
+
     <section className="Titulo">
     <h1>Soporte</h1>
-    <p>Reporta Aqui Abajo👇</p>
     </section>
+    
+
     <form className="sectionForm">
+
     <h2>Complete y cuentenos su problema</h2>
+
+    <div className="sectionLabel">
+
+    <div>
     <label>
-    <input type="text" placeholder="Ingrese su Nombre y Apellido"></input>
+    <input className='input' type="text" placeholder="Ingrese su Nombre y Apellido"></input>
     </label>
+    </div>
+
+    <div>
     <label>
-    <input type="email" placeholder="Ingrese su Gmail"></input>
+    <input  className='input' type="email" placeholder="Ingrese su Gmail"></input>
     </label>
-    <label>
-    <input type="text" placeholder="Informe su Problema"></input>
+    </div>
+
+    <div className="divTextarea">
+    <textarea className='soporteTextarea' placeholder="Informe su Problema"></textarea>
+    </div>
+
+    <div>
+    <input onChange={cambiarArchivo} className='input' id="archivos" type="file" style={{display:'none'}}></input>
+    
+    <label htmlFor="archivos" className="seleccionarArchivos">
+    Subir archivo 📁
     </label>
-    <label>
-    <input type="file"></input>
-    </label>
+    <p>{nombreArchivo}</p>
+    </div>
+    
+    </div>
+
+    
+
     </form>
+
     <nav className="navlink">
     <Link to="/" className="link">Inicio</Link>
     </nav>
+
     </main>
     );
 }
