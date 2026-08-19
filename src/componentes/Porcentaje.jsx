@@ -6,7 +6,7 @@ function Porcentaje({letters,sortLetters,showAll, setShowAll,visibleLetters}){
    <section className='sectionPorcentaje'>
     <div className='divTitulo'>
     <h2 className='titulo'>Letter Density</h2>
-    <button className='boton' onClick={()=>setShowAll(!showAll)}>{showAll ? "See Less ▴" : "See More ▾"}</button>
+    <button className='boton-inicio' onClick={()=>setShowAll(!showAll)}>{showAll ? "See Less ▴" : "See More ▾"}</button>
     </div>
     
     <article>

@@ -17,7 +17,7 @@ export function Soporte({flashLight,setFlashLight,nombreArchivo,setNombreArchivo
 
    const imagen = document.querySelector('img')
 
-   const boton = document.querySelector('button')
+   const boton = document.querySelectorAll('button')
 
    const link = document.querySelector('a')
 
@@ -32,10 +32,6 @@ export function Soporte({flashLight,setFlashLight,nombreArchivo,setNombreArchivo
    
    imagen.src = logoBlanco;
    
-   boton.style.color = '#000000'
-   
-   boton.style.backgroundColor ='#ffffff'
-   
    link.style.color = '#000000'
 
    text.style.backgroundColor = '#e9e7e7'
@@ -49,6 +45,10 @@ export function Soporte({flashLight,setFlashLight,nombreArchivo,setNombreArchivo
    input.style.color = '#000000'
    input.style.border = '1px solid #aaaaaa'
    })
+   boton.forEach((botton)=>{
+   botton.style.color = '#000000'
+   botton.style.backgroundColor ='#ffffff'
+   })
 
    } 
    else{
@@ -57,10 +57,6 @@ export function Soporte({flashLight,setFlashLight,nombreArchivo,setNombreArchivo
    document.body.style.color = '#ffffff'
    
    imagen.src = logoNegro;
-   
-   boton.style.backgroundColor = '#0d0b11'
-   
-   boton.style.color = '#ffffff'
    
    link.style.color = '#ffffff'
 
@@ -75,7 +71,10 @@ export function Soporte({flashLight,setFlashLight,nombreArchivo,setNombreArchivo
    input.style.color = '#ffffff'
    input.style.border = '1px solid #8d8c8c'
    })
-
+   boton.forEach((botton)=>{
+   botton.style.color = '#ffffff'
+   botton.style.backgroundColor ='#0d0b11'
+   })
    }
 },[flashLight])
    
@@ -133,10 +132,9 @@ export function Soporte({flashLight,setFlashLight,nombreArchivo,setNombreArchivo
     </label>
     <p>{nombreArchivo}</p>
     </div>
-    
     </div>
 
-    
+    <button type='submit' className="boton-Enviar">Enviar</button>
 
     </form>
 

@@ -15,7 +15,7 @@ useEffect(()=>{
 
 const textarea = document.querySelector('textarea')
 
-const botones = document.querySelectorAll('button')
+const botones = document.querySelectorAll('.boton-inicio')
 
 const logo = document.querySelector('img')
 
@@ -72,7 +72,7 @@ Link.style.color = '#ffffff'
 
  return(
 <div className='contenedorBoton'>
- <button className='boton' onClick={tocarClick}>☼</button>
+ <button className='boton-inicio' onClick={tocarClick}>☼</button>
 </div>
 )
 }
