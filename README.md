@@ -20,7 +20,6 @@ Durante el desarrollo de la aplicación surgieron algunos retos técnicos que se
 
 3. **Adaptabilidad del diseño (Responsive Design 320px - 2000px):**
    - *Problema:* Evitar que en pantallas grandes los formularios e inputs se estiraran en exceso, y que en celulares pequeños (320px) apareciera el scroll horizontal.
-   - *Solución:* Se centralizaron los estilos aplicando reglas globales de `max-width`, contenedores con `margin: 0 auto` y `box-sizing: border-box` para garantizar que el contenido permanezca centrado y responsivo.
 
 
 ## Estructura del Proyecto
