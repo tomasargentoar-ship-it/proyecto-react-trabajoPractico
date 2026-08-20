@@ -5,6 +5,7 @@ import Boton from "../componentes/Boton";
 import { Link } from "react-router-dom";
 import logoNegro from '../assets/Logo.png'
 import logoBlanco from '../assets/logoClaro.jpg'
+import { useSearchParams } from 'react-router-dom'
 
 export function Soporte({flashLight,setFlashLight,nombreArchivo,setNombreArchivo}){
     
@@ -83,6 +84,10 @@ export function Soporte({flashLight,setFlashLight,nombreArchivo,setNombreArchivo
     setNombreArchivo(e.target.files[0].name)
     }
    }
+   
+   const [searchParams] = useSearchParams();
+
+   const mensajeUrl = searchParams.get('mensaje') || '';
 
     return(
     <main>
@@ -121,7 +126,7 @@ export function Soporte({flashLight,setFlashLight,nombreArchivo,setNombreArchivo
     </div>
 
     <div className="divTextarea">
-    <textarea className='soporteTextarea' placeholder="Informe su Problema"></textarea>
+    <textarea defaultValue={mensajeUrl} className='soporteTextarea' placeholder="Informe su Problema"></textarea>
     </div>
 
     <div>

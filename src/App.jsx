@@ -12,7 +12,7 @@ import Porcentaje from './componentes/Porcentaje.jsx'
 import { Customslink } from './componentes/Customslink.jsx'
 import { Soporte } from './router-componentes/Soporte.jsx'
 import { Normas } from './router-componentes/Normas.jsx'
-
+import { useSearchParams } from 'react-router-dom'
 
 function App() {
   const [text, setText] = useState("");

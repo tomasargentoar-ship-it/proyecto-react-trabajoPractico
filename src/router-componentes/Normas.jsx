@@ -5,6 +5,7 @@ import '../styles/normas.css'
 import { Link } from "react-router-dom";
 import logoNegro from "../assets/Logo.png"
 import logoBlanco from "../assets/logoClaro.jpg"
+import { useSearchParams } from 'react-router-dom'
 
 
 export function Normas({flashLight,setFlashLight}){
