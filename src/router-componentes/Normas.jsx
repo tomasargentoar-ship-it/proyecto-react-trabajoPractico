@@ -56,7 +56,7 @@ export function Normas({flashLight,setFlashLight}){
 
  return(
 
-<main>
+<main className="mainNormas">
 
 <section className="sectionLogo">
 <img className="logo" src={logoNegro} alt="Logo" />

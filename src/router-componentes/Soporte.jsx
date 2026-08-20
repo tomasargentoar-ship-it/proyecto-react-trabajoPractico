@@ -90,7 +90,7 @@ export function Soporte({flashLight,setFlashLight,nombreArchivo,setNombreArchivo
    const mensajeUrl = searchParams.get('mensaje') || '';
 
     return(
-    <main>
+    <main className="mainSoporte">
     
     <section className="sectionImg">
     <img src={logoNegro} alt="Logo" className="soporteLogo"/>
